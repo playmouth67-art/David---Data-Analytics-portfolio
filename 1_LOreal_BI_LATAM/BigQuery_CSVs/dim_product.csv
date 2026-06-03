@@ -1,0 +1,42 @@
+productkey,brand,division,category,subcategory,unitprice_usd,cogs_pct
+101,L'Oréal Paris,Consumer Products,Skincare,Moisturizer,22.99,0.38
+102,L'Oréal Paris,Consumer Products,Haircare,Shampoo,11.99,0.35
+103,L'Oréal Paris,Consumer Products,Haircare,Conditioner,12.99,0.35
+104,L'Oréal Paris,Consumer Products,Makeup,Foundation,18.99,0.4
+105,L'Oréal Paris,Consumer Products,Makeup,Mascara,14.99,0.38
+106,Maybelline,Consumer Products,Makeup,Lipstick,12.99,0.36
+107,Maybelline,Consumer Products,Makeup,Foundation,15.99,0.4
+108,Maybelline,Consumer Products,Makeup,Eyeliner,9.99,0.35
+109,Garnier,Consumer Products,Skincare,Serum,19.99,0.37
+110,Garnier,Consumer Products,Haircare,Hair Color,13.99,0.38
+111,Garnier,Consumer Products,Skincare,Sunscreen,16.99,0.36
+112,NYX,Consumer Products,Makeup,Lipstick,10.99,0.38
+113,NYX,Consumer Products,Makeup,Eyeshadow,14.99,0.4
+114,Essie,Consumer Products,Nail,Nail Polish,9.99,0.32
+201,Lancôme,L'Oréal Luxe,Skincare,Anti-Aging,85.0,0.3
+202,Lancôme,L'Oréal Luxe,Makeup,Foundation,52.0,0.32
+203,Lancôme,L'Oréal Luxe,Fragrance,Perfume,95.0,0.28
+204,Yves Saint Laurent,L'Oréal Luxe,Makeup,Lipstick,42.0,0.3
+205,Yves Saint Laurent,L'Oréal Luxe,Fragrance,Perfume,115.0,0.28
+206,Giorgio Armani,L'Oréal Luxe,Makeup,Foundation,64.0,0.3
+207,Giorgio Armani,L'Oréal Luxe,Fragrance,Perfume,110.0,0.28
+208,Kiehl's,L'Oréal Luxe,Skincare,Moisturizer,54.0,0.32
+209,Kiehl's,L'Oréal Luxe,Skincare,Serum,68.0,0.3
+210,Urban Decay,L'Oréal Luxe,Makeup,Eyeshadow,52.0,0.32
+301,Kérastase,Professional Products,Haircare Pro,Shampoo,34.0,0.35
+302,Kérastase,Professional Products,Haircare Pro,Treatment,58.0,0.33
+303,Redken,Professional Products,Haircare Pro,Shampoo,26.0,0.35
+304,Redken,Professional Products,Color Pro,Hair Color,45.0,0.38
+305,Matrix,Professional Products,Haircare Pro,Conditioner,22.0,0.36
+306,Matrix,Professional Products,Color Pro,Hair Color,38.0,0.37
+307,Pureology,Professional Products,Haircare Pro,Shampoo,32.0,0.34
+308,Biolage,Professional Products,Haircare Pro,Treatment,28.0,0.35
+401,La Roche-Posay,Active Cosmetics,Dermocosmetics,Moisturizer,32.0,0.36
+402,La Roche-Posay,Active Cosmetics,Suncare,SPF50+,28.0,0.35
+403,La Roche-Posay,Active Cosmetics,Dermocosmetics,Cleanser,24.0,0.36
+404,Vichy,Active Cosmetics,Dermocosmetics,Serum,38.0,0.34
+405,Vichy,Active Cosmetics,Suncare,SPF50+,26.0,0.35
+406,CeraVe,Active Cosmetics,Dermocosmetics,Moisturizer,18.99,0.38
+407,CeraVe,Active Cosmetics,Dermocosmetics,Cleanser,16.99,0.37
+408,SkinCeuticals,Active Cosmetics,Dermocosmetics,Serum,98.0,0.29
+409,Dermablend,Active Cosmetics,Makeup,Foundation,34.0,0.36

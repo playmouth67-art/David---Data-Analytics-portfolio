@@ -1,0 +1,8 @@
+channelkey,channel,channeltype,revenue_weight
+1,Modern Trade,Offline,0.28
+2,Traditional Trade,Offline,0.18
+3,Specialty Retail,Offline,0.14
+4,E-commerce,Online,0.22
+5,Professional,B2B,0.09
+6,Pharmacy,Offline,0.07
+7,D2C,Online,0.02

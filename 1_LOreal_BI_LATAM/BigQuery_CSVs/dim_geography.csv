@@ -1,0 +1,6 @@
+geokey,country,countrycode,region,currency,fx_rate_to_usd
+1,Mexico,MX,North LATAM,MXN,0.058
+2,Brazil,BR,South LATAM,BRL,0.2
+3,Colombia,CO,North LATAM,COP,0.00024
+4,Argentina,AR,South LATAM,ARS,0.0027
+5,Chile,CL,South LATAM,CLP,0.0011

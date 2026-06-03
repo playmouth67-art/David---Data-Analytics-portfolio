@@ -1,0 +1,13 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales de Office / LibreOffice
+~$*
+.~lock.*
+*.tmp
+
+# Archivos que NO forman parte del portafolio público
+/CIMMYT_Interview_Prep_David.docx
+/Correos_Postulacion_Portafolio.md

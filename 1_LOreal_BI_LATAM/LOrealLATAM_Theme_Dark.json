@@ -1,0 +1,71 @@
+{
+  "name": "L'Oréal LATAM Dark",
+  "dataColors": [
+    "#C9A84C",
+    "#4B8BF5",
+    "#E8D5A3",
+    "#065F46",
+    "#991B1B",
+    "#6B21A8",
+    "#0369A1",
+    "#FFFFFF"
+  ],
+  "background": "#12122A",
+  "foreground": "#C9A84C",
+  "tableAccent": "#C9A84C",
+  "maximum": "#C9A84C",
+  "minimum": "#4B8BF5",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#FFFFFF",
+      "fontSize": 10
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "color": "#C9A84C",
+      "fontSize": 13
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "color": "#C9A84C",
+      "fontSize": 20
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#C9A84C",
+      "fontSize": 11
+    },
+    "largeTitle": {
+      "fontFace": "Segoe UI",
+      "color": "#C9A84C",
+      "fontSize": 14
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#1A1A3E" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#2E2E5A" } }, "radius": 4 }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#12122A" } }, "transparency": 0 }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{ "color": { "solid": { "color": "#C9A84C" } }, "fontSize": 18, "fontFamily": "Segoe UI", "bold": true }],
+        "label": [{ "color": { "solid": { "color": "#FFFFFF" } }, "fontSize": 10, "fontFamily": "Segoe UI" }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [{ "fontColor": { "solid": { "color": "#C9A84C" } }, "background": { "solid": { "color": "#1A1A3E" } }, "fontSize": 11, "bold": true }],
+        "items": [{ "fontColor": { "solid": { "color": "#FFFFFF" } }, "fontSize": 10 }]
+      }
+    }
+  }
+}

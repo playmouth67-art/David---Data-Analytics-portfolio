@@ -1,0 +1,66 @@
+{
+  "name": "L'Oréal LATAM BI Platform",
+  "dataColors": [
+    "#C9A84C",
+    "#12122A",
+    "#1D4ED8",
+    "#065F46",
+    "#991B1B",
+    "#6B21A8",
+    "#E8D5A3",
+    "#0369A1"
+  ],
+  "background": "#F8F7F4",
+  "foreground": "#12122A",
+  "tableAccent": "#C9A84C",
+  "maximum": "#C9A84C",
+  "minimum": "#12122A",
+  "textClasses": {
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#12122A",
+      "fontSize": 11
+    },
+    "title": {
+      "fontFace": "Segoe UI",
+      "color": "#12122A",
+      "fontSize": 14
+    },
+    "callout": {
+      "fontFace": "Segoe UI",
+      "color": "#12122A",
+      "fontSize": 28
+    },
+    "header": {
+      "fontFace": "Segoe UI",
+      "color": "#12122A",
+      "fontSize": 12
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } } }],
+        "border": [{ "show": false }],
+        "dropShadow": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#F8F7F4" } }, "transparency": 0 }]
+      }
+    },
+    "card": {
+      "*": {
+        "calloutValue": [{ "color": { "solid": { "color": "#12122A" } }, "fontSize": 28, "fontFamily": "Segoe UI", "bold": true }],
+        "label": [{ "color": { "solid": { "color": "#6B7280" } }, "fontSize": 11, "fontFamily": "Segoe UI" }]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [{ "fontColor": { "solid": { "color": "#FFFFFF" } }, "background": { "solid": { "color": "#12122A" } }, "fontSize": 12, "bold": true }],
+        "items": [{ "fontColor": { "solid": { "color": "#12122A" } }, "fontSize": 11 }]
+      }
+    }
+  }
+}

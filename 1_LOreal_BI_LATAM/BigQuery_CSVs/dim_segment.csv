@@ -1,0 +1,7 @@
+segmentkey,segment,description,spendlevel
+1,Mass Market,Price-conscious,Low
+2,Mid Market,Value-seekers,Medium
+3,Premium,Quality-focused,Medium
+4,Luxury,Prestige buyers,High
+5,Professional,Salon/Pro,High
+6,Dermocosmetics,Skin-health,Medium
