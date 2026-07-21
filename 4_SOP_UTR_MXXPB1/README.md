@@ -2,21 +2,19 @@
 
 **Autor:** David Adrián González Molina
 **Tipo:** Caso práctico de Sales & Operations Planning (planeación de fuerza laboral)
-**Stack:** Modelado en Excel · SQL en Google BigQuery · Storytelling ejecutivo
+**Stack:** Modelado en Excel · SQL en Google BigQuery · Presentación ejecutiva
 
 > **Aviso:** Proyecto de portafolio con fines demostrativos. Los datos son
-> **sintéticos / ficticios** y no corresponden a información operativa real de
-> ninguna empresa.
+> sintéticos y no corresponden a información operativa real de ninguna empresa.
 
 ---
 
 ## Contexto y objetivo
 
-Ejercicio de S&OP para el site **MXXPB1** en la Semana 27, orientado a dimensionar
-la operación con el menor costo manteniendo cobertura completa. Cubre tres frentes
-de decisión —planeación de headcount, optimización de jornadas y estrategia a 12
-semanas— más un ejercicio de SQL en BigQuery, con hallazgos presentables a un
-ejecutivo en pocos minutos.
+Ejercicio de S&OP para el site **MXXPB1** en la Semana 27: dimensionar la operación
+al menor costo sin perder cobertura. Cubre tres frentes de decisión (planeación de
+headcount, diseño de jornadas y estrategia a 12 semanas) más un ejercicio de SQL en
+BigQuery. Los hallazgos están armados para contarse a un ejecutivo en pocos minutos.
 
 ## Hallazgos principales
 
@@ -24,7 +22,7 @@ ejecutivo en pocos minutos.
   Jueves y Viernes. El dato contraintuitivo: el Lunes, con el mayor volumen semanal
   (18,400 paquetes), solo necesita 33 — el headcount lo define la concentración del
   volumen en la **hora pico**, no el total del día.
-- **Jornadas:** el mix óptimo es **22 FT 6x1 + 11 FT 5x2 + 15 Diaristas**, con un
+- **Jornadas:** el mix que gana es **22 FT 6x1 + 11 FT 5x2 + 15 Diaristas**, con un
   costo de **$143,600 semanales** y cobertura 100% los seis días activos. La palanca
   clave es asignar el día libre de todos los FT al **Domingo**, el único día sin
   operación.
@@ -44,12 +42,11 @@ ejecutivo en pocos minutos.
 | `MeLi_Video_Script.md` | Guión de video completo del caso. |
 | `MeLi_Video_Script_Ejecutivo.md` | Guión del video resumen ejecutivo (90–120 s). |
 
-## Habilidades demostradas
+## Qué demuestra este proyecto
 
-- **Planeación de capacidad / workforce planning:** dimensionamiento por hora pico,
-  diseño de mix de jornadas y optimización de costo con restricciones de cobertura.
-- **Pensamiento de S&OP:** forecast por percentiles (P60), capa flex y cadencia de
-  revisión del plan.
-- **SQL analítico en la nube:** agregación con CTE, JOIN y HAVING en BigQuery.
-- **Comunicación ejecutiva:** traducción del análisis en una recomendación accionable
-  y guiones de video para presentación.
+Dimensionamiento de headcount por hora pico, diseño de mix de jornadas y optimización
+de costo con restricciones de cobertura reales. La lógica de S&OP viene de práctica,
+no de manual: forecast por percentiles (P60), capa flex de Diaristas y una cadencia de
+revisión que no marea a la operación. El SQL cubre agregación con CTE, JOIN y HAVING
+en BigQuery. Todo cierra en dos presentaciones y dos guiones de video, porque un plan
+de staffing que no se puede explicar en cinco minutos no se aprueba.
