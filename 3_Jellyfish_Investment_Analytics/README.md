@@ -4,7 +4,7 @@
 
 A one-page executive dashboard concept for senior marketers, built from the supplied
 MKT Digital Data. The goal: give CMOs and above a top-level read on digital channel
-performance, designed to surface unexpected patterns worth investigating further.
+performance, and make the odd patterns easy to spot and worth a second look.
 
 ---
 
@@ -12,7 +12,7 @@ performance, designed to surface unexpected patterns worth investigating further
 
 Across two years, media spend grew **+19.7%** ($146.5M → $175.5M) while impressions
 stayed essentially flat (**+0.4%**) and CPM rose **+19.3%**. More budget bought
-more-expensive impressions — not more audience. The biggest-spending channels (Meta,
+more-expensive impressions, not a bigger audience. The biggest-spending channels (Meta,
 TikTok) are not the most efficient; YouTube and Google Ads return far more value per
 dollar yet receive only ~28% of spend.
 
