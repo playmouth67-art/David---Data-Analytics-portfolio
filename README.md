@@ -17,6 +17,7 @@ Cuatro casos de negocio completos, del dato crudo al dashboard. Cada uno arranca
 | 2 | [Promise & Speed (Mercado Libre)](./2_MeLi_Mercado_Libre) | ¿Por qué cayó la conversión de una ruta? El análisis rastrea el problema hasta la promesa de entrega y propone cómo recalibrarla. | Python (pandas) · SQL · Tableau |
 | 3 | [Jellyfish — Investment Analytics](./3_Jellyfish_Investment_Analytics) | El gasto de marketing subió 19.7% y el alcance quedó plano. Un dashboard de una página se lo explica a un CMO sin que tenga que preguntar. | BigQuery · Looker Studio · SQL |
 | 4 | [S&OP UTR — Site MXXPB1](./4_SOP_UTR_MXXPB1) | ¿Cuánta gente necesita un sitio en hora pico y con qué mix de jornadas? Dimensionamiento de headcount a 12 semanas. | Excel · SQL · S&OP |
+| 5 | [ETL de integración de visitas web](./5_ETL_Visitas_Web) | Un proceso diario que trae archivos de un servidor, los valida, los consolida en MySQL y los borra del origen. No es un análisis: es un sistema que corre, con puntos de control que atrapan lo que las validaciones no ven. | Python · MySQL · Docker · SQL |
 
 Cada carpeta trae su README con el contexto, la metodología y los hallazgos.
 
@@ -28,7 +29,7 @@ Empieza por el README de cada proyecto: ahí está el resumen ejecutivo. El cód
 
 ## Competencias
 
-Modelado dimensional, SQL analítico en BigQuery, ETL/ELT con arquitectura medallion, Power BI con DAX y RLS, visualización en Tableau y Looker Studio, Python para análisis de datos.
+Modelado dimensional, SQL analítico en BigQuery, ETL/ELT con arquitectura medallion, Power BI con DAX y RLS, visualización en Tableau y Looker Studio, Python para análisis de datos. Del lado de ingeniería: orquestación de procesos batch, idempotencia, reconciliación y control de calidad del dato.
 
 ---
 

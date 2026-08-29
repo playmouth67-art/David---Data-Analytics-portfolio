@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="489.6pt" height="237.6pt" viewBox="0 0 489.6 237.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-14T18:57:10.468569</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 237.6 
+L 489.6 237.6 
+L 489.6 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 103.464 64.8 
+Q 105.687 64.8 106.232949 64.8 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 100.632949 62 
+L 106.232949 64.8 
+L 100.632949 67.6 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #2e74b5; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 195.192 64.8 
+Q 197.415 64.8 197.960949 64.8 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 192.360949 62 
+L 197.960949 64.8 
+L 192.360949 67.6 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #2e74b5; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 286.92 64.8 
+Q 289.143 64.8 289.688949 64.8 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 284.088949 62 
+L 289.688949 64.8 
+L 284.088949 67.6 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #2e74b5; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 378.648 64.8 
+Q 380.871 64.8 381.416949 64.8 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 375.816949 62 
+L 381.416949 64.8 
+L 375.816949 67.6 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #2e74b5; stroke: #2e74b5; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 151.668 79.92 
+Q 151.668 105.624 151.668 129.874556 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #a61c1c; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 154.468 124.274556 
+L 151.668 129.874556 
+L 148.868 124.274556 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #a61c1c; stroke: #a61c1c; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 243.396 79.92 
+Q 243.396 105.624 243.396 129.874556 
+" clip-path="url(#p4d8ae7aba3)" style="fill: none; stroke: #a61c1c; stroke-width: 1.3; stroke-linecap: round"/>
+    <path d="M 246.196 124.274556 
+L 243.396 129.874556 
+L 240.596 124.274556 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #a61c1c; stroke: #a61c1c; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 22.032 79.92 
+L 97.848 79.92 
+Q 103.464 79.92 103.464 77.328 
+L 103.464 52.272 
+Q 103.464 49.68 97.848 49.68 
+L 22.032 49.68 
+Q 16.416 49.68 16.416 52.272 
+L 16.416 77.328 
+Q 16.416 79.92 22.032 79.92 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #d9e2f3; stroke: #1f4e79; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 113.76 79.92 
+L 189.576 79.92 
+Q 195.192 79.92 195.192 77.328 
+L 195.192 52.272 
+Q 195.192 49.68 189.576 49.68 
+L 113.76 49.68 
+Q 108.144 49.68 108.144 52.272 
+L 108.144 77.328 
+Q 108.144 79.92 113.76 79.92 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #d9e2f3; stroke: #1f4e79; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 205.488 79.92 
+L 281.304 79.92 
+Q 286.92 79.92 286.92 77.328 
+L 286.92 52.272 
+Q 286.92 49.68 281.304 49.68 
+L 205.488 49.68 
+Q 199.872 49.68 199.872 52.272 
+L 199.872 77.328 
+Q 199.872 79.92 205.488 79.92 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #d9e2f3; stroke: #1f4e79; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 297.216 79.92 
+L 373.032 79.92 
+Q 378.648 79.92 378.648 77.328 
+L 378.648 52.272 
+Q 378.648 49.68 373.032 49.68 
+L 297.216 49.68 
+Q 291.6 49.68 291.6 52.272 
+L 291.6 77.328 
+Q 291.6 79.92 297.216 79.92 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #d9e2f3; stroke: #1f4e79; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 388.944 79.92 
+L 464.76 79.92 
+Q 470.376 79.92 470.376 77.328 
+L 470.376 52.272 
+Q 470.376 49.68 464.76 49.68 
+L 388.944 49.68 
+Q 383.328 49.68 383.328 52.272 
+L 383.328 77.328 
+Q 383.328 79.92 388.944 79.92 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #e2efda; stroke: #548235; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 117.504 159.84 
+L 274.752 159.84 
+Q 280.368 159.84 280.368 157.248 
+L 280.368 134.352 
+Q 280.368 131.76 274.752 131.76 
+L 117.504 131.76 
+Q 111.888 131.76 111.888 134.352 
+L 111.888 157.248 
+Q 111.888 159.84 117.504 159.84 
+z
+" clip-path="url(#p4d8ae7aba3)" style="fill: #fce4e4; stroke: #a61c1c; stroke-width: 1.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 13.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f4e79" x="244.8" y="23.649891" transform="rotate(-0 244.8 23.649891)">Ciclo de vida de un archivo</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #595959" x="244.8" y="40.165594" transform="rotate(-0 244.8 40.165594)">El estatus en la bitácora dice exactamente hasta dónde llegó y por qué se detuvo</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f4e79" x="59.94" y="66.676375" transform="rotate(-0 59.94 66.676375)">DESCARGADO</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f4e79" x="151.668" y="66.676375" transform="rotate(-0 151.668 66.676375)">VALIDADO</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f4e79" x="243.396" y="66.676375" transform="rotate(-0 243.396 66.676375)">CARGADO</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f4e79" x="335.124" y="66.676375" transform="rotate(-0 335.124 66.676375)">RESPALDADO</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #548235" x="426.852" y="66.521781" transform="rotate(-0 426.852 66.521781)">PURGADO_ORIGEN</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #a61c1c" x="196.128" y="142.571406" transform="rotate(-0 196.128 142.571406)">RECHAZADO</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #595959" x="196.128" y="154.968844" transform="rotate(-0 196.128 154.968844)">con motivo_rechazo registrado</text>
+   </g>
+   <g id="text_10">
+    <g id="patch_14">
+     <path d="M 156.348 110.548125 
+L 197.36325 110.548125 
+Q 198.80325 110.548125 198.80325 109.108125 
+L 198.80325 102.139875 
+Q 198.80325 100.699875 197.36325 100.699875 
+L 156.348 100.699875 
+Q 154.908 100.699875 154.908 102.139875 
+L 154.908 109.108125 
+Q 154.908 110.548125 156.348 110.548125 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a61c1c" x="156.348" y="107.61075" transform="rotate(-0 156.348 107.61075)">V-01 layout</text>
+   </g>
+   <g id="text_11">
+    <g id="patch_15">
+     <path d="M 248.076 110.548125 
+L 304.396875 110.548125 
+Q 305.836875 110.548125 305.836875 109.108125 
+L 305.836875 102.139875 
+Q 305.836875 100.699875 304.396875 100.699875 
+L 248.076 100.699875 
+Q 246.636 100.699875 246.636 102.139875 
+L 246.636 109.108125 
+Q 246.636 110.548125 248.076 110.548125 
+z
+" style="fill: #ffffff"/>
+    </g>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #a61c1c" x="248.076" y="107.61075" transform="rotate(-0 248.076 107.61075)">PC-3 descuadre</text>
+   </g>
+   <g id="text_12">
+    <g id="patch_16">
+     <path d="M 293.94 156.751322 
+L 452.421375 156.751322 
+Q 455.151375 156.751322 455.151375 154.021322 
+L 455.151375 137.578678 
+Q 455.151375 134.848678 452.421375 134.848678 
+L 293.94 134.848678 
+Q 291.21 134.848678 291.21 137.578678 
+L 291.21 154.021322 
+Q 291.21 156.751322 293.94 156.751322 
+z
+" style="fill: #fce4e4; stroke: #a61c1c; stroke-width: 0.9; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'" transform="translate(293.94 143.505459)">Un archivo RECHAZADO no se respalda</text>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'" transform="translate(293.94 152.399166)">y no se borra del origen: vuelve mañana</text>
+   </g>
+   <g id="text_13">
+    <g id="patch_17">
+     <path d="M 16.416 203.220469 
+L 458.12025 203.220469 
+Q 460.85025 203.220469 460.85025 200.490469 
+L 460.85025 192.629531 
+Q 460.85025 189.899531 458.12025 189.899531 
+L 16.416 189.899531 
+Q 13.686 189.899531 13.686 192.629531 
+L 13.686 200.490469 
+Q 13.686 203.220469 16.416 203.220469 
+z
+" style="fill: #d9e2f3; stroke: #2e74b5; stroke-width: 0.9; stroke-linejoin: miter"/>
+    </g>
+    <text style="font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="16.416" y="198.868313" transform="rotate(-0 16.416 198.868313)">PC-2: si la huella SHA-256 ya existe en la bitácora, el archivo se omite sin entrar al ciclo y sin borrarse del origen</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4d8ae7aba3">
+   <rect x="10.8" y="10.8" width="468" height="216"/>
+  </clipPath>
+ </defs>
+</svg>

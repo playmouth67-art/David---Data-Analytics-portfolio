@@ -1,0 +1,8 @@
+# Dependencias del proceso ETL
+#   pip install -r requirements.txt
+
+pymysql>=1.0.0
+
+# Solo se necesita con ETL_ORIGEN=sftp, para el origen remoto real.
+# El modo local (por omisión) no la requiere.
+# paramiko>=3.0.0
