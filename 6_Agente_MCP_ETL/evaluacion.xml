@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Evaluación del servidor MCP del ETL de visitas.
+
+  Cada pregunta exige encadenar varias herramientas y tiene una respuesta única
+  verificable por comparación de texto. Todas son de solo lectura.
+
+  Estado esperado de la base: el que deja `preparar_demo.sh`, cuatro corridas
+  sobre los datos sintéticos que genera `python/generar_datos.py` del caso 5.
+
+    1  OK        3 archivos, 2005 registros leídos, 2001 consolidados
+    2  FALLIDO   la transformación revienta con una fecha fuera de formato
+    3  OK        2 archivos detectados, 0 cargados (todos saltados por huella)
+    4  OK        250 leídos, 245 cargados, 4 rechazos por correo inválido
+-->
+<evaluation>
+
+  <qa_pair>
+    <question>Hay exactamente un archivo que fue borrado del servidor de origen durante una corrida que después terminó fallando, y cuyos registros nunca llegaron a la tabla estadistica. Como su huella ya quedó registrada, volver a colocarlo en el origen no lo reprocesa. ¿Cómo se llama ese archivo?</question>
+    <answer>report_10.txt</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>De todos los códigos de validación registrados en la tabla de auditoría a lo largo de todas las corridas, ¿cuál es el que más veces se ha disparado?</question>
+    <answer>V-08</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>El catálogo de validaciones clasifica cada regla por severidad y por nivel. ¿Cuántas reglas rechazan un registro individual, es decir, tienen severidad RECHAZO y nivel REGISTRO?</question>
+    <answer>2</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Un operador ve el código V-01 en el tablero y no sabe qué hacer. Según la acción que el catálogo indica para ese código, ¿a qué equipo debe escalar?</question>
+    <answer>Desarrollo</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Sumando los clics de todas las filas de la tabla de visitas, ¿cuántas visitas totales al sitio web se registraron?</question>
+    <answer>106</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Considerando el historial completo de corridas del proceso, ¿cuántas terminaron con estatus FALLIDO?</question>
+    <answer>1</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>Un archivo fue rechazado por tener un layout inválido en su cabecera y por diseño no se borró del servidor de origen. ¿Qué estatus tiene registrado ese archivo en la bitácora de control?</question>
+    <answer>RECHAZADO</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>La tabla visitante guarda una fila por persona que llegó al sitio web dando clic en el enlace. ¿Cuántas personas distintas hay registradas ahí?</question>
+    <answer>53</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>El renglón original que la auditoría guarda para cada incidencia debería tener las 15 columnas del layout, pero la función que lo arma omite los valores nulos. De los 66 renglones auditados que tienen contenido guardado, ¿cuántos quedaron con un número de campos distinto de 15?</question>
+    <answer>64</answer>
+  </qa_pair>
+
+  <qa_pair>
+    <question>En la primera corrida se leyeron 2005 registros de los tres archivos, pero la tabla estadistica quedó con menos filas porque algunos envíos se consolidaron. ¿Cuántas filas tiene estadistica al terminar todas las corridas?</question>
+    <answer>2001</answer>
+  </qa_pair>
+
+</evaluation>

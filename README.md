@@ -1,9 +1,9 @@
 # Portafolio de Datos — David Adrián González Molina
 
 **Data Analyst / Data Engineer**
-Python · SQL · Google BigQuery · Power BI · Tableau · Looker Studio
+Python · SQL · Google BigQuery · Power BI · Tableau · Looker Studio · MCP
 
-Cuatro casos de negocio completos, del dato crudo al dashboard. Cada uno arranca con una pregunta que alguien haría en una junta y termina en un entregable que la responde con números.
+Seis casos completos: cuatro análisis de negocio que van del dato crudo al dashboard, un proceso ETL que corre de verdad, y un agente que lo opera. Cada uno arranca con una pregunta que alguien haría en una junta y termina en un entregable que la responde con números.
 
 > **Aviso:** todos los datos son sintéticos, generados para este portafolio. No corresponden a información real de ninguna empresa; las marcas aparecen solo como contexto de negocio simulado.
 
@@ -18,6 +18,7 @@ Cuatro casos de negocio completos, del dato crudo al dashboard. Cada uno arranca
 | 3 | [Jellyfish — Investment Analytics](./3_Jellyfish_Investment_Analytics) | El gasto de marketing subió 19.7% y el alcance quedó plano. Un dashboard de una página se lo explica a un CMO sin que tenga que preguntar. | BigQuery · Looker Studio · SQL |
 | 4 | [S&OP UTR — Site MXXPB1](./4_SOP_UTR_MXXPB1) | ¿Cuánta gente necesita un sitio en hora pico y con qué mix de jornadas? Dimensionamiento de headcount a 12 semanas. | Excel · SQL · S&OP |
 | 5 | [ETL de integración de visitas web](./5_ETL_Visitas_Web) | Un proceso diario que trae archivos de un servidor, los valida, los consolida en MySQL y los borra del origen. No es un análisis: es un sistema que corre, con puntos de control que atrapan lo que las validaciones no ven. | Python · MySQL · Docker · SQL |
+| 6 | [Agente de operación del ETL](./6_Agente_MCP_ETL) | Un servidor MCP de 14 herramientas que deja operar y auditar el caso 5 desde un agente. Probarlo destapó cuatro defectos del ETL que los archivos de ejemplo no revelaban. | Python · MCP · MySQL · Pydantic |
 
 Cada carpeta trae su README con el contexto, la metodología y los hallazgos.
 
@@ -27,9 +28,11 @@ Cada carpeta trae su README con el contexto, la metodología y los hallazgos.
 
 Empieza por el README de cada proyecto: ahí está el resumen ejecutivo. El código (SQL, notebooks) y los datos sintéticos van en la misma carpeta, así que todo se puede reproducir. Los archivos de Power BI (.pbix) y Tableau (.twbx) están incluidos; donde hay versión interactiva publicada, el README del proyecto tiene el enlace.
 
+Los casos 5 y 6 se leen juntos: primero el sistema, después el agente que lo opera y lo audita.
+
 ## Competencias
 
-Modelado dimensional, SQL analítico en BigQuery, ETL/ELT con arquitectura medallion, Power BI con DAX y RLS, visualización en Tableau y Looker Studio, Python para análisis de datos. Del lado de ingeniería: orquestación de procesos batch, idempotencia, reconciliación y control de calidad del dato.
+Modelado dimensional, SQL analítico en BigQuery, ETL/ELT con arquitectura medallion, Power BI con DAX y RLS, visualización en Tableau y Looker Studio, Python para análisis de datos. Del lado de ingeniería: orquestación de procesos batch, idempotencia, reconciliación y control de calidad del dato. Del lado de IA: servidores MCP, diseño de herramientas para agentes, y el criterio de dónde un modelo aporta y dónde hay que dejar el cálculo en SQL.
 
 ---
 

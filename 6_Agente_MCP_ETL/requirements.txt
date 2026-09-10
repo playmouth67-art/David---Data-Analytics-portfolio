@@ -1,0 +1,4 @@
+# Servidor MCP del ETL de integración de visitas web
+mcp>=1.2.0
+pymysql>=1.1.0
+pydantic>=2.0.0
