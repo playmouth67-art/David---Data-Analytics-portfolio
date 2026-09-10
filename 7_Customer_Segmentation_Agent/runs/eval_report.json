@@ -1,0 +1,119 @@
+{
+  "pct": 100.0,
+  "rows": [
+    {
+      "case": "k2_limpio",
+      "ari": 1.0,
+      "passed": 6,
+      "total": 6,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": true,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": null
+      }
+    },
+    {
+      "case": "k3_limpio",
+      "ari": 1.0,
+      "passed": 6,
+      "total": 6,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": true,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": null
+      }
+    },
+    {
+      "case": "k5_mas_fino",
+      "ari": 1.0,
+      "passed": 6,
+      "total": 6,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": true,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": null
+      }
+    },
+    {
+      "case": "sin_estructura",
+      "ari": null,
+      "passed": 3,
+      "total": 3,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": null,
+        "escalado": null,
+        "silhouette": true,
+        "nombres": null,
+        "criterio": null
+      }
+    },
+    {
+      "case": "escala_traidora",
+      "ari": 1.0,
+      "passed": 6,
+      "total": 6,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": true,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": null
+      }
+    },
+    {
+      "case": "long_tail",
+      "ari": 1.0,
+      "passed": 7,
+      "total": 7,
+      "all_pass": true,
+      "checks": {
+        "estructura": true,
+        "k": true,
+        "ARI": true,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": true
+      }
+    },
+    {
+      "case": "fact_sales_e2e",
+      "ari": null,
+      "passed": 5,
+      "total": 5,
+      "all_pass": true,
+      "checks": {
+        "estructura": null,
+        "k": null,
+        "ARI": null,
+        "escalado": true,
+        "silhouette": true,
+        "nombres": true,
+        "criterio": null,
+        "proceso": true,
+        "honestidad": true
+      }
+    }
+  ]
+}

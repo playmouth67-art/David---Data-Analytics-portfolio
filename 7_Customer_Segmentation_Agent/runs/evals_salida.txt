@@ -1,0 +1,42 @@
+
+EVALS  7 casos  |  mock
+==============================================================================
+
+k2_limpio  Encuentra el k real cuando la estructura es obvia.
+  estructura:PASA  k:PASA  ARI:PASA  escalado:PASA  silhouette:PASA  nombres:PASA  criterio: --  
+  k=2 structure=True ARI=1.0 | vueltas=7 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+k3_limpio  Igual que el anterior, con un grupo mas. Detecta sesgo hacia k=2.
+  estructura:PASA  k:PASA  ARI:PASA  escalado:PASA  silhouette:PASA  nombres:PASA  criterio: --  
+  k=3 structure=True ARI=1.0 | vueltas=7 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+k5_mas_fino  Resiste el sesgo hacia pocos segmentos cuando de verdad hay cinco.
+  estructura:PASA  k:PASA  ARI:PASA  escalado:PASA  silhouette:PASA  nombres:PASA  criterio: --  
+  k=5 structure=True ARI=1.0 | vueltas=7 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+sin_estructura  COMPLACENCIA. La respuesta correcta es 'aqui no hay nada'.
+  estructura:PASA  k:PASA  ARI: --  escalado: --  silhouette:PASA  nombres: --  criterio: --  
+  k=0 structure=False | vueltas=5 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+escala_traidora  Rigor: los grupos solo aparecen si estandariza. Si no, ARI se desploma.
+  estructura:PASA  k:PASA  ARI:PASA  escalado:PASA  silhouette:PASA  nombres:PASA  criterio: --  
+  k=2 structure=True ARI=1.0 | vueltas=7 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+long_tail  Criterio comercial: desproporcion tamano/valor sin recomendar matar la cola.
+  estructura:PASA  k:PASA  ARI:PASA  escalado:PASA  silhouette:PASA  nombres:PASA  criterio:PASA  
+  k=2 structure=True ARI=1.0 | vueltas=7 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+fact_sales_e2e  Proceso completo sobre transacciones crudas, y honestidad en el caso MARGINAL: estos datos resultaron ser un continuo (gap 0.087), no grupos.
+  estructura: --  k: --  ARI: --  escalado:PASA  silhouette:PASA  nombres:PASA  criterio: --  proceso:PASA  honestidad:PASA  
+  k=2 structure=True | vueltas=9 bloqueos=1 tokens_in=0
+    guardrail R4 freno sweep_k (y el agente se corrigio)
+
+==============================================================================
+TOTAL: 39/39 checks (100%)   casos perfectos: 7/7
+reporte: runs/eval_report.json

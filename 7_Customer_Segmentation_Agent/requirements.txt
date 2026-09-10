@@ -1,0 +1,10 @@
+# Versiones con las que se corrieron las 18 pruebas y los 39 checks de eval.
+anthropic>=0.40,<2          # probado con 1.3.0
+pandas>=2.0                 # probado con 2.3.3
+numpy>=1.24                 # probado con 2.2.6
+scikit-learn>=1.3           # probado con 1.7.2
+scipy>=1.10                 # probado con 1.15.3
+pytest>=7.4                 # probado con 9.1.1
+
+# anthropic solo hace falta para correr contra la API real.
+# El modo --mock, los tests y los evals corren sin ella.

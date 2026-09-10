@@ -1,0 +1,154 @@
+
+AGENTE DE SEGMENTACION  |  fact_sales  |  mock
+--------------------------------------------------------------------
+
+  Primero veo la forma de la tabla.
+
+  -> inspect_table {"table": "fact_sales"}
+     ok {"table": "fact_sales", "rows": 32000, "columns": {"TransactionID": {"type": "numeric", "min": 1.0, "max": 32000.0, "mean": 16000.5, "std": 9237.749, "nulls": 0}, "Date": {"type": "categorical", "dist
+
+  Son transacciones. Hay que colapsar a una fila por entidad.
+
+  -> aggregate_to_entities {"source": "fact_sales", "dest": "entities", "group_by": ["Brand", "Country"], "metrics": {"Revenue_USD": "sum", "Margin_Pct": "mean", "TransactionID": "count"}
+     motivo: Marca x pais es la unidad sobre la que un equipo comercial puede actuar; el cliente individual no existe en esta tabla.
+     ok {"table": "entities", "rows": 98, "columns": {"Brand": {"type": "categorical", "distinct": 20, "top": {"Armani Beauty": 5, "Biotherm": 5, "Vichy": 5, "SkinCeuticals": 5, "Redken": 5, "Pureology": 5, "
+
+  Agrego posicion competitiva dentro de cada pais.
+
+  -> add_share_of_total {"table": "entities", "value_col": "Revenue_USD_sum", "within": "Country", "new_col": "Share_of_Country_Pct"}
+     ok {"table": "entities", "rows": 98, "columns": {"Brand": {"type": "categorical", "distinct": 20, "top": {"Armani Beauty": 5, "Biotherm": 5, "Vichy": 5, "SkinCeuticals": 5, "Redken": 5, "Pureology": 5, "
+
+  Barro k para ver donde esta el mejor silhouette.
+
+  -> sweep_k {"table": "entities", "k_min": 2, "k_max": 8}
+     BLOQUEADO [R4] 'entities' no esta estandarizada. K-means usa distancia euclidiana: sin estandarizar, la variable de rango mas grande decide los clusters ella sola. Llama standardize_features antes.
+
+  Tienes razon: sin estandarizar la variable de mayor rango decide sola. Escalo.
+
+  -> standardize_features {"table": "entities", "features": ["Revenue_USD_sum", "Margin_Pct_mean", "Share_of_Country_Pct"]}
+     motivo: Escala, rentabilidad y posicion competitiva son tres ejes distintos. Dejo fuera el conteo de transacciones porque duplica la escala.
+     ok {"table": "entities", "features": ["Revenue_USD_sum", "Margin_Pct_mean", "Share_of_Country_Pct"], "n_entities": 98, "raw_ranges": {"Revenue_USD_sum": [829.42, 93733.67], "Margin_Pct_mean": [46.88, 74.
+
+  Ahora si, barro k sobre los datos estandarizados.
+
+  -> sweep_k {"table": "entities", "k_min": 2, "k_max": 8}
+     ok {"table": "entities", "sweep": [{"k": 2, "inertia": 171.94, "silhouette": 0.4137, "silhouette_null": 0.332, "gap_vs_null": 0.0817, "smallest_cluster_pct": 26.5}, {"k": 3, "inertia": 112.65, "silhouett
+
+  El silhouette manda: k=2.
+
+  -> fit_segmentation {"table": "entities", "k": 2}
+     motivo: k=2 maximiza el silhouette (0.414) y son pocos segmentos como para que un equipo los pueda operar.
+     ok {"table": "entities", "k": 2, "silhouette": 0.4137, "cluster_sizes": {"0": 72, "1": 26}}
+
+  Perfilo para ver la desproporcion entre tamano y valor.
+
+  -> profile_segments {"table": "entities", "value_col": "Revenue_USD_sum"}
+     ok {"table": "entities", "profiles": [{"Cluster": 0, "Revenue_USD_sum": 8195.831, "Margin_Pct_mean": 59.182, "Share_of_Country_Pct": 3.325, "n_entities": 72, "pct_of_entities": 73.5}, {"Cluster": 1, "Rev
+
+  Cierro con las conclusiones.
+
+  -> submit_findings {"structure_found": true, "chosen_k": 2, "silhouette": 0.4137, "justification": "k=2 maximiza el silhouette (0.414) en el rango 2-8. Estructura marginal (gap 0.
+     ok conclusiones entregadas
+
+== terminado en 9 vueltas ==
+
+====================================================================
+k elegida: 2   silhouette: 0.4137
+por que: k=2 maximiza el silhouette (0.414) en el rango 2-8. Estructura marginal (gap 0.087): ver caveats.
+
+  Cola larga / vigilancia (c0)
+    73.5% de las entidades, 42.2% del valor (ratio 0.57).
+    accion: Consolidar y bajar costo de ejecucion; margen sano con poca escala no es motivo de discontinuacion.
+
+  Motor de valor (c1)
+    26.5% de las entidades, 57.8% del valor (ratio 2.18).
+    accion: Proteger y expandir: aqui esta el negocio.
+
+caveats: PARTICION OPERATIVA, no hallazgo. El gap contra el modelo nulo es 0.087: estos datos son un continuo, no grupos naturales. El corte en 2 partes sirve para repartir esfuerzo comercial, pero seria falso presentarlo como el descubrimiento de segmentos preexistentes. Para segmentar de verdad hacen falta mas variables: recencia, frecuencia, canal, comportamiento de compra. Los segmentos describen, no explican: no hay causalidad aqui. Son cortes sobre un continuo, y las entidades en la frontera podrian caer del otro lado con otra semilla.
+
+--------------------------------------------------------------------
+telemetria {
+  "trace_file": "runs/d78a4d71.jsonl",
+  "tool_calls": 9,
+  "tools_used": [
+    "inspect_table",
+    "aggregate_to_entities",
+    "add_share_of_total",
+    "sweep_k",
+    "standardize_features",
+    "sweep_k",
+    "fit_segmentation",
+    "profile_segments",
+    "submit_findings"
+  ],
+  "blocked": [
+    [
+      "R4",
+      "sweep_k"
+    ]
+  ],
+  "errors": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "wall_seconds": 0.3
+}
+
+AGENTE DE SEGMENTACION  |  gt_sin_estructura  |  mock
+--------------------------------------------------------------------
+
+  Primero veo la forma de la tabla.
+
+  -> inspect_table {"table": "gt_sin_estructura"}
+     ok {"table": "gt_sin_estructura", "rows": 140, "columns": {"EntityID": {"type": "categorical", "distinct": 140, "top": {"U0000": 1, "U0096": 1, "U0090": 1, "U0091": 1, "U0092": 1, "U0093": 1, "U0094": 1,
+
+  Barro k para ver donde esta el mejor silhouette.
+
+  -> sweep_k {"table": "gt_sin_estructura", "k_min": 2, "k_max": 8}
+     BLOQUEADO [R4] 'gt_sin_estructura' no esta estandarizada. K-means usa distancia euclidiana: sin estandarizar, la variable de rango mas grande decide los clusters ella sola. Llama standardize_features antes.
+
+  Tienes razon: sin estandarizar la variable de mayor rango decide sola. Escalo.
+
+  -> standardize_features {"table": "gt_sin_estructura", "features": ["Revenue_USD", "Avg_Margin_Pct", "Share_of_Country_Pct"]}
+     motivo: Escala, rentabilidad y posicion competitiva son tres ejes distintos. Dejo fuera el conteo de transacciones porque duplica la escala.
+     ok {"table": "gt_sin_estructura", "features": ["Revenue_USD", "Avg_Margin_Pct", "Share_of_Country_Pct"], "n_entities": 140, "raw_ranges": {"Revenue_USD": [9468.32, 94895.82], "Avg_Margin_Pct": [48.36, 78
+
+  Ahora si, barro k sobre los datos estandarizados.
+
+  -> sweep_k {"table": "gt_sin_estructura", "k_min": 2, "k_max": 8}
+     ok {"table": "gt_sin_estructura", "sweep": [{"k": 2, "inertia": 302.74, "silhouette": 0.2659, "silhouette_null": 0.2611, "gap_vs_null": 0.0048, "smallest_cluster_pct": 47.1}, {"k": 3, "inertia": 232.48, 
+
+  El gap contra el nulo es 0.023. No hay estructura. Lo reporto asi.
+
+  -> submit_findings {"structure_found": false, "chosen_k": 0, "silhouette": 0.3207, "justification": "El silhouette llega a 0.321 en k=5, pero contra el modelo nulo el gap es de so
+     ok conclusiones entregadas
+
+== terminado en 5 vueltas ==
+
+====================================================================
+SIN ESTRUCTURA UTIL
+  El silhouette llega a 0.321 en k=5, pero contra el modelo nulo el gap es de solo 0.023: los datos no le ganan a su propia version barajada. Ese silhouette es geometria, no estructura. Cualquier corte aqui seria arbitrario.
+
+caveats: Reportar segmentos aqui seria inventar estructura. Si se necesita accionar, conviene traer mas variables antes que forzar clusters.
+
+--------------------------------------------------------------------
+telemetria {
+  "trace_file": "runs/6ff24e2a.jsonl",
+  "tool_calls": 5,
+  "tools_used": [
+    "inspect_table",
+    "sweep_k",
+    "standardize_features",
+    "sweep_k",
+    "submit_findings"
+  ],
+  "blocked": [
+    [
+      "R4",
+      "sweep_k"
+    ]
+  ],
+  "errors": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "wall_seconds": 0.3
+}

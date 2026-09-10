@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.env
+
+# Las trazas se generan en cada corrida. Solo viajan las de ejemplo,
+# que sirven de evidencia para quien lee el repo sin clonarlo.
+runs/*
+!runs/ejemplo_fact_sales.jsonl
+!runs/ejemplo_sin_estructura.jsonl
+!runs/demo_salida.txt
+!runs/eval_report.json
+!runs/evals_salida.txt
