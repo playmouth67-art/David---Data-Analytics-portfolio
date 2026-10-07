@@ -1,0 +1,134 @@
+# podcast_agent — todos los umbrales viven aquí. Editable.
+# Tiempos en segundos salvo que la clave diga _frames.
+
+language: es
+output_root: output            # relativo a la raíz del proyecto (~/podcast_agent)
+
+media:
+  video_ext: [.mov, .mp4, .mxf, .m4v, .mkv, .avi]
+  audio_ext: [.wav, .aif, .aiff, .flac, .mp3, .m4a, .bwf]
+  identical_channel_corr: 0.995   # canales casi idénticos = un solo mic (estéreo duplicado)
+
+sync:
+  analysis_sr: 8000              # envolventes remuestreadas a ~8 kHz
+  bandpass_hz: [200, 3000]
+  envelope_lowpass_hz: 400
+  coarse_env_hz: 100             # búsqueda gruesa sobre todo el archivo
+  min_windows: 3                 # inicio, medio, final (más si el archivo es largo)
+  window_every_s: 600            # una ventana extra cada 10 min
+  window_len_s: 30
+  search_margin_s: 2.0           # cubre ~185 ppm en 3 h
+  max_residual_frames: 1.0
+  min_peak_corr: 0.30            # correlación de Pearson en el pico
+  min_peak_ratio: 1.15           # pico / segundo pico fuera de ±50 ms
+
+audio:
+  sample_rate: 48000
+  bit_depth: 24
+  highpass_hz: 80
+  denoise: "afftdn=nr=8:nf=-55"
+  deess: "deesser=i=0.4:m=0.5:f=0.5:s=o"
+  compress: "acompressor=threshold=-20dB:ratio=3:attack=5:release=120:makeup=2"
+  target_lufs: -14.0
+  target_tp_dbtp: -1.0
+  limiter_margin_db: 1.0         # el limitador por pista se pone en TP - margen
+  max_norm_passes: 4
+
+vad:
+  analysis_sr: 16000
+  frame_s: 0.010
+  noise_floor_percentile: 10
+  threshold_above_floor_db: 12
+  fallback_threshold_dbfs: -40
+  floor_valid_range_dbfs: [-85, -37]   # fuera de este rango se usa el fallback
+  bleed_margin_db: 6             # activo solo si supera a TODOS los demás mics por ≥6 dB
+  hangover_s: 0.20
+  min_speech_s: 0.10
+  merge_gap_s: 0.30
+  crosstalk_window_s: 1.0
+  crosstalk_min_share: 0.20      # ambos mics dominantes ≥20% de la ventana
+  crosstalk_min_s: 1.0
+  use_pyannote_if_shared_mic: true
+
+transcription:
+  backend: auto                  # auto | mlx | faster | fixture
+  mlx_model: mlx-community/whisper-large-v3-turbo
+  faster_model: large-v3
+  faster_model_no_gpu: small     # sin GPU -> modelo más chico (con aviso)
+  initial_prompt: "Eh, este... mmm, o sea, pues, bueno, ehh. Transcripción literal en español de México, con muletillas."
+  word_refine: energy            # energy | whisperx (whisperx requiere torch: pedir permiso)
+  gate_attenuation_db: -40       # se atenúa el mic fuera de su habla dominante para no transcribir sangrado
+  gate_pad_s: 0.30
+
+fillers:
+  words: [eh, ehh, este, mmm, o sea, pues, bueno]
+  clearance_s: 0.10              # ≥0.1 s libres antes y después
+  ambiguous: [este, pues, bueno, o sea]
+  ambiguous_min_gap_after_s: 0.25  # "este libro": si la siguiente palabra llega pegada, NO es muletilla
+  bueno_adjective_prev: [muy, es, está, estaba, estuvo, tan, más, qué, lo, un, una, súper, bien, buen, bastante]
+  ambiguous_needs_turn_context_s: 1.5
+  keep_pause_each_side_s: [0.15, 0.10]
+
+dead_air:
+  min_silence_s: 0.8             # TODOS los mics bajo umbral por >0.8 s
+  keep_pause_s: 0.25             # pausa natural que queda
+  keep_split: [0.15, 0.10]       # tras la última palabra / antes de la siguiente
+  word_guard_s: 0.03             # nunca cortar a menos de 30 ms de una palabra
+  question_words: [qué, cómo, cuándo, dónde, por qué, quién, quiénes, cuál, cuáles, cuánto, cuánta, cuántos, cuántas]
+  punchline_laugh_window_s: 4.0
+  first_minute_min_silence_s: 0.5
+  first_minute_keep_pause_max_s: 0.7   # < 0.8 para que el redondeo a frames no deje aire muerto
+
+edit:
+  min_shot_s: 1.2
+  reaction_laugh_min_s: 0.6      # excepción etiquetada: reacciones a risa
+  max_shot_s: [3.0, 6.0]         # más energía -> más corto
+  first_minute_max_shot_s: 4.0
+  first_minute_s: 60
+  j_cut_frames: [6, 12]          # el audio entra antes; el video sigue 6–12 frames después
+  l_cut_frames: [8, 15]          # el audio del anterior se sostiene 8–15 frames sobre la imagen nueva
+  speaker_switch_min_s: 0.4      # histéresis de cambio de hablante
+  backchannel_max_s: 1.0         # "ajá", "sí" cortos del oyente = oportunidad de reacción
+  reaction_len_s: [1.2, 2.0]
+  wide_reestablish_s: [2.0, 3.0]
+  punch_in_zoom: [1.10, 1.15]
+  join_snap_frames: 12           # mover un corte cercano a la unión si cae a ≤12 frames
+  seed: 7
+
+cold_open:
+  enabled: true
+  length_s: [15, 45]
+  sting_s: 1.0
+  sting_path: null               # archivo de sting opcional; si no, hueco con marcador
+
+topics:
+  window_s: 60
+  min_spacing_s: 180
+  depth_threshold: 0.12
+  cue_phrases: [cambiando de tema, otra cosa, hablando de, pasemos a, siguiente tema, por cierto, ahora sí, vamos con]
+
+broll:
+  min_gap_s: 45
+  max_gap_s: 90
+
+viral:
+  window_s: [20, 90]
+  top_n: 10
+  max_overlap: 0.3
+  weights: {energy: 0.20, pitch: 0.15, laughter: 0.15, rate: 0.10, semantic: 0.40}
+  hook_words: [nadie, nunca, jamás, la verdad, el secreto, te voy a contar, lo peor, lo mejor, increíble, error, millones, dinero, miedo, imagínate, neta, no vas a creer]
+
+markers:
+  viral: Red
+  keep_pause: Yellow
+  review: Yellow
+  topic: Blue
+  sync: Purple
+  broll: Green
+
+resolve:
+  project: PODCAST_AUTO
+  timeline_prefix: AUTO_EDIT_
+  script_api: "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting"
+  script_lib: "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Libraries/Fusion/fusionscript.so"
+  integration: auto              # auto | append | import  (se fija en la Fase 0 en tu Mac)

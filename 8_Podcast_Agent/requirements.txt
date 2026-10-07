@@ -1,0 +1,16 @@
+# podcast_agent — dependencias fijadas (probadas con Python 3.13).
+# Python >= 3.12 (lo exigen numpy 2.5 / scipy 1.18 / librosa 1.0). Verificar en la Fase 0 qué Python acepta tu Resolve.
+numpy==2.5.3
+scipy==1.18.1
+soundfile==0.14.0
+librosa==1.0.0
+pyyaml==6.0.3
+opentimelineio==0.18.1
+pytest==9.1.1
+
+# Transcripción (se elige sola según la máquina):
+mlx-whisper==0.4.3; sys_platform == "darwin" and platform_machine == "arm64"
+faster-whisper==1.2.1; sys_platform != "darwin" or platform_machine != "arm64"
+
+# NO incluidas a propósito (requieren torch, >500 MB; se piden con permiso):
+#   whisperx (alineación fina), pyannote.audio (solo si dos personas comparten un mic, usa HF_TOKEN)
