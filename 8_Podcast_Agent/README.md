@@ -11,17 +11,15 @@ una persona: sin aire muerto, sin planos estáticos, con un buen gancho y sin ju
 ## Instalación (macOS)
 
 ```bash
-# 1) ffmpeg
-brew install ffmpeg
-
-# 2) Proyecto (este folder = ~/podcast_agent)
-cp -R 8_Podcast_Agent ~/podcast_agent && cd ~/podcast_agent
-python3 -m venv .venv && source .venv/bin/activate     # Python ≥ 3.12
-pip install -r requirements.txt                         # en Apple Silicon instala mlx-whisper (Metal)
-
-# 3) Probar
-python -m pytest -q
+brew install ffmpeg                                   # si no lo tienes
+mkdir -p ~/podcast_agent && tar -xzf podcast_agent_v0.1.0.tar.gz -C ~/podcast_agent
+cd ~/podcast_agent && bash scripts/setup_mac.sh       # venv (Python ≥ 3.12) + requirements + pytest
+bash scripts/phase0_discovery.sh                      # informe de la Fase 0, solo lectura -> output/phase0_report.txt
 ```
+
+Para seguir con Claude Code en la Mac: abre `claude` dentro de `~/podcast_agent`. `CLAUDE.md` se carga solo, y
+`docs/SPEC.md` (encargo original) y `docs/HANDOFF.md` (estado, decisiones y primer mensaje sugerido) tienen el resto
+del contexto. `.claude/settings.json` bloquea las ediciones en la carpeta de media.
 
 Variables para el scripting de Resolve (fase 4; requiere Studio y *Preferences > System > General > External
 scripting = Local*):
